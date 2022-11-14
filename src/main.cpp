@@ -17,13 +17,18 @@ int main()
 		encoded += encode(str1[i], key);
 	}
 	std::cout << "Encoded string is: " << encoded << '\n';
-
 	for (int i = 0; i < (int)encoded.size(); i++)
 	{
 	    decoded += decode(encoded[i], key);
 	}
-
     std::cout << "Decoded string is: " << decoded << '\n';
-
+	if (str1 == decoded)
+	{
+		std::cout << "Test is passed :)\n";
+	}
+	else
+	{
+		std::cout << "Test is failed :(\n";	
+	}
     return 0;
 }
